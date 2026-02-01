@@ -1,5 +1,7 @@
 # RAG with Langflow, Ollama, Redis, and Milvus
 
+NOTE: This project is using Python 3.13.0
+
 ## Setup
 
 1. Create a VENV and activate it.
