@@ -36,6 +36,7 @@ ollama run mistral
 
 6. You will need the following Docker images or more recent equivalents installed and have an instance running:
   - redis:7-alpine
+  - milvusdb/milvus:v2.3.21
 
 ## Create Flow
 
