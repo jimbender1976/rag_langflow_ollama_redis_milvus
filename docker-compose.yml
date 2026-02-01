@@ -10,6 +10,11 @@ services:
       - "9091:9091"
     volumes:
       - ./milvus-data:/var/lib/milvus
+    environment:
+      ETCD_ENDPOINTS: "milvus-etcd:2379"
+      MINIO_ADDRESS: "milvus-minio:9000"
+      MINIO_ACCESS_KEY: "minioadmin"
+      MINIO_SECRET_KEY: "minioadmin"
     depends_on:
       - etcd
       - minio
