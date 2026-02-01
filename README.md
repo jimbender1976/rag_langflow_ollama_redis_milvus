@@ -48,7 +48,6 @@ docker compose up -d
 1. Open the Langflow URL that the shell showed
 2. Click "Create first flow" or "New Flow"
 3. Click Blank Flow
-4. Give Flow a name
 > **Note**
 > You can also choose the "Vector Store RAG" template if you would prefer to just customize that.
 
