@@ -30,7 +30,6 @@ langflow run
 
 ## Run Ollama
 ```bash
-ollama serve
 ollama run mistral
 ```
 > **Note**
