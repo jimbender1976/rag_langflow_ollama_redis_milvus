@@ -52,9 +52,4 @@ docker compose up -d
 > **Note**
 > You can also choose the "Vector Store RAG" template if you would prefer to just customize that.
 
-## User Input
 
-Add each of the following components to your flow:
-- Text Input
-- Prompt Template
-- Chat Input
