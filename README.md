@@ -34,7 +34,7 @@ ollama run mistral
 > **Note**
 > Or the model of your choice!
 
-6. You will need the following Docker images or more recent equivalents installed and running:
+6. You will need the following Docker images or more recent equivalents installed and have an instance running:
   - redis:7-alpine
 
 ## Create Flow
