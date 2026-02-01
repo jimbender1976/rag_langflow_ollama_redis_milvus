@@ -26,6 +26,17 @@ langflow run
 > **Note**
 > This will start Langflow on its default port.  The localhost URL Langflow is running on will show in the shell's output once ready.
 
+4. Install and run Ollama
+```bash
+ollama serve
+ollama run mistral
+```
+> **Note**
+> Or the model of your choice!
+
+6. You will need the following Docker images or more recent equivalents installed and running:
+  - redis:7-alpine
+
 ## Create Flow
 
 1. Open the Langflow URL that the shell showed
