@@ -3,6 +3,7 @@
 ## Prerequisites
 - Python 3.13.0
 - Docker
+- Ollama
 
 ## Setup
 
@@ -27,7 +28,7 @@ langflow run
 > **Note**
 > This will start Langflow on its default port.  The localhost URL Langflow is running on will show in the shell's output once ready.
 
-4. Install and run Ollama
+## Run Ollama
 ```bash
 ollama serve
 ollama run mistral
