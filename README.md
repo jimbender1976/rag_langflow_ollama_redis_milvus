@@ -43,6 +43,11 @@ Run the following from the root of this project:
 docker compose up -d
 ```
 
+## Create your Milvus db
+
+1. http://127.0.0.1:9091/webui/
+2. 
+
 ## Create Flow
 
 1. Open the Langflow URL that the shell showed
