@@ -38,7 +38,7 @@ services:
     image: milvusdb/milvus-insight:latest
     container_name: milvus-insight
     ports:
-      - "8000:3000"
+      - "8001:3000"
     depends_on:
       - milvus
 
