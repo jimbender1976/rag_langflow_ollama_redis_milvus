@@ -26,8 +26,9 @@ langflow run
 > **Note**
 > This will start Langflow on its default port.  The localhost URL Langflow is running on will show in the shell's output once ready.
 
-4. Create your Flow
-   1. Open the Langflow URL that the shell showed
-   2. Click "Create first flow" or "New Flow"
-   3. Click Blank Flow
-   4. Give Flow a name
+## Create Flow
+
+1. Open the Langflow URL that the shell showed
+2. Click "Create first flow" or "New Flow"
+3. Click Blank Flow
+4. Give Flow a name
