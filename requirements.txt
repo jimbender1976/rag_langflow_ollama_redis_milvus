@@ -1,1 +1,1 @@
-langflow==1.0.12
+langflow>=1.7.1,<2
