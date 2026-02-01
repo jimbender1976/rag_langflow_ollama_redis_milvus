@@ -1,7 +1,8 @@
 # RAG with Langflow, Ollama, Redis, and Milvus
 
-> **Note**
-> This project uses Python 3.13.0
+## Prerequisites
+- Python 3.13.0
+- Docker
 
 ## Setup
 
@@ -34,9 +35,12 @@ ollama run mistral
 > **Note**
 > Or the model of your choice!
 
-6. You will need the following Docker images or more recent equivalents installed and have an instance running:
-  - redis:7-alpine
-  - milvusdb/milvus:v2.3.21
+## Start the docker containers
+
+Run the following from the root of this project:
+```bash
+docker compose up -d
+```
 
 ## Create Flow
 
