@@ -13,3 +13,9 @@ python -m venv .venv
 ```
 > **Note**
 > This will take several minutes!  Langflow has a LOT of dependencies
+
+2. Load the requirements.txt libraries
+```bash
+py -m pip install --upgrade pip
+pip install -r requirements.txt
+```
