@@ -41,15 +41,18 @@ services:
     networks:
       - milvus_net
 
-  insight:
-    image: milvusdb/milvus-insight:latest
-    container_name: milvus-insight
+  attu:
+    image: zilliz/attu:v2.4.12
+    container_name: attu
+    environment:
+      MILVUS_URL: milvus-standalone:19530
     ports:
       - "8001:3000"
     depends_on:
       - milvus
     networks:
       - milvus_net
+
 
   redis:
     image: redis:7-alpine
