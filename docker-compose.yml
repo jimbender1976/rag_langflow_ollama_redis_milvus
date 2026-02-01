@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   milvus:
-    image: milvusdb/milvus:v2.6.6
+    image: milvusdb/milvus:v2.4.0  # Note: v2.6.6 is very new, ensure it matches your docs
     container_name: milvus-standalone
     command: ["milvus", "run", "standalone"]
     ports:
@@ -18,6 +18,8 @@ services:
     depends_on:
       - etcd
       - minio
+    networks:
+      - milvus_net
 
   etcd:
     image: quay.io/coreos/etcd:v3.5.5
@@ -26,8 +28,8 @@ services:
       etcd
       --advertise-client-urls=http://0.0.0.0:2379
       --listen-client-urls=http://0.0.0.0:2379
-    ports:
-      - "2379:2379"
+    networks:
+      - milvus_net
 
   minio:
     image: minio/minio:RELEASE.2023-10-07T15-07-38Z
@@ -36,8 +38,8 @@ services:
     environment:
       MINIO_ACCESS_KEY: minioadmin
       MINIO_SECRET_KEY: minioadmin
-    ports:
-      - "9000:9000"
+    networks:
+      - milvus_net
 
   insight:
     image: milvusdb/milvus-insight:latest
@@ -46,12 +48,13 @@ services:
       - "8001:3000"
     depends_on:
       - milvus
+    networks:
+      - milvus_net
 
   redis:
     image: redis:7-alpine
     container_name: redis
-    ports:
-      - "6379:6379"
-    volumes:
-      - ./redis-data:/data
-    command: ["redis-server", "--appendonly", "yes"]
+
+networks:
+  milvus_net:
+    driver: bridge
